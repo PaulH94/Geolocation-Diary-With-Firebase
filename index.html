@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Map Project</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+	#map{
+		margin-left:auto;
+		margin-right:auto;
+		width:100%;
+		height:380px;
+	}
+	#box{
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.Activity{
+		text-align: center;
+	}
+</style>
+
+
+</head>
+<body>
+
+<nav class= "navbar navbar-inverse navbar-static-top">
+	<div class = "container">
+		<div class = "navbar-header">
+			<a class = "navbar-brand"><p style="font-size:30px"><i>ici</i></p></a>
+		</div>
+		<ul class = "nav navbar-nav">
+			<li class = "active"><a href= "#">home</a></li>
+			<li><a href = "#">about</a></li>
+			<li><a href = "/contact.html">contact</a></li>
+		</ul>
+		<ul class = "nav navbar-nav navbar-right">
+			<!--<li><a href= "#">register</a></li>-->
+			<!--<div id="user-container">-->
+			<!--<li><a href = "/signout.html">Sign Out</a></li>-->
+			<li>
+			  <div hidden id="user-pic"></div>
+			  <a href = "#">
+        		  <div hidden id="user-name"></div>
+			  </a>
+			</li>
+			<li>
+			  <button hidden id="sign-out">Sign Out</button>
+			  <button hidden id="sign-in">Sign in with google</button>
+			</li>			
+			<!--</div>-->
+		</ul>
+	</div>
+</nav>
+<div id="title"></div>
+<div id="map"></div>
+<br>
+<div class="container">
+	<!--
+	<p>Leave a comment here</p>
+	<input type="text" id="message">
+	<button onclick="fun()">submit</button>
+
+	<div id = "comments">
+		<span id ="comment-filler"></span>
+	</div>-->
+	<form id="comment-form" action="#">
+		<p>Leave a comment here</p>
+		<input type="text" id="comment" size ="30" placeholder="Praise the sun">
+		<button id="submit">submit</submit>
+	</form>
+</div>
+<br>
+<div class = "Activity"><p><i>Recent Activity</i></p></div>
+<div class="container">
+	<div class = "panel panel-default">
+		<div class ="panel-heading">
+			Comment
+		</div>
+		<div class = "panel-body">
+		<div id="comments">
+			No comment
+			<span id ="comment-filler"></span>	
+		</div>
+		</div>
+	</div>
+	<hr>
+	<p>Cette merde est ma merde</p>
+</div>
+<br>
+<footer>
+
+</footer>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=[API Key]=initMap">
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: [Firebase API Key],
+    authDomain: "testingmap-1d6b3.firebaseapp.com",
+    databaseURL: "https://testingmap-1d6b3.firebaseio.com",
+    storageBucket: [Firebase SB],
+  };
+  firebase.initializeApp(config);
+</script>
+
+    
+<script src="main.js"></script>
+    
+</body>
+</html>
