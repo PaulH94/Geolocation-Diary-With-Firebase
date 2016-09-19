@@ -211,6 +211,10 @@ MapProject.resetMaterialTextfield = function(element) {
 
 MapProject.prototype.displayMessage = function(key, name, text, time, location) {
   com.push("location: " + location +"<br>"+text+" at "+time+"<br>by "+name+"<br><hr>");
+  var buf = '';
+  for(var i = com.length-1; i>-1; --i){
+    buf = buf +com[i];
+  };
   $("#comments").html(com);
 }
 
